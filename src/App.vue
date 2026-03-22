@@ -1,85 +1,70 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import NavigationComponent from './components/NavigationComponent.vue'
+import QuestionComponent from './components/QuestionComponent.vue'
+import AnswersComponent from './components/AnswersComponent.vue'
+import NextComponent from './components/NextComponent.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+  <div style="position: relative">
+    <img src="/flowers-left.svg" alt="" class="decor decor-left" />
+    <img src="/flowers-right.svg" alt="" class="decor decor-right" />
+    <div class="container">
+      <NavigationComponent :total="10" :current="2" />
+      <div class="question">
+        <div style="flex: 1"></div>
+        <QuestionComponent style="flex: 2" />
+        <div class="btn">
+          <NextComponent :visible="true" />
+        </div>
+      </div>
+      <div class="answers">
+        <AnswersComponent src="/ans1.jpg" :id="11" />
+        <AnswersComponent src="/ans2.jpg" :id="12" :correct="true" />
+        <AnswersComponent src="/ans3.jpg" :id="13" :correct="false" />
+        <AnswersComponent src="/ans4.jpg" :id="14" />
+      </div>
     </div>
-  </header>
-
-  <RouterView />
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+.container {
+  position: relative;
+  background: linear-gradient(45deg, #003dce, #15aaff, #003dce);
+  box-shadow: 7px 7px 0 0 #0060d9;
+  border-radius: 60px;
+  padding-top: 5px;
+  z-index: 10;
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+div.answers {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+  padding: 20px 0;
+  border-radius: 0;
 }
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+div.question {
+  display: flex;
+  align-items: center;
 }
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
+div.btn {
+  display: flex;
+  flex: 1;
 }
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+.decor {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  pointer-events: none;
 }
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+.decor-left {
+  left: 0;
+  transform: translate(-58%, -40%);
 }
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.decor-right {
+  right: 0;
+  transform: translate(50%, -81%);
 }
 </style>
