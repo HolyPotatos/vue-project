@@ -33,7 +33,7 @@ import NextComponent from './components/NextComponent.vue'
   position: relative;
   background: linear-gradient(45deg, #003dce, #15aaff, #003dce);
   box-shadow: 7px 7px 0 0 #0060d9;
-  border-radius: 60px;
+  border-radius: 51px;
   padding-top: 5px;
   z-index: 10;
 }
@@ -61,10 +61,10 @@ div.btn {
 }
 .decor-left {
   left: 0;
-  transform: translate(-58%, -40%);
+  transform: translate(-58%, -37%);
 }
 .decor-right {
   right: 0;
-  transform: translate(50%, -81%);
+  transform: translate(50%, -90%);
 }
 </style>
