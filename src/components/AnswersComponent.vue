@@ -20,15 +20,16 @@ defineProps({
 </template>
 <style scoped>
 div {
+  position: relative;
   height: 250px;
   width: 200px;
   border-radius: 20px;
   margin-bottom: 50px;
-  overflow: hidden;
 }
 img {
   height: 100%;
   width: 100%;
+  border-radius: 20px;
   object-fit: cover;
   object-position: center;
   user-select: none;
@@ -40,9 +41,31 @@ div:hover {
   cursor: pointer;
 }
 .img--correct {
-  border: 10px solid #66ff31;
+  outline: 10px solid #66ff31;
+  transform: none;
+  pointer-events: none;
 }
 .img--wrong {
-  border: 10px solid #ff0f8e;
+  outline: 10px solid #ff0f8e;
+  transform: none;
+  pointer-events: none;
+}
+
+.img--correct::after,
+.img--wrong::after {
+  position: absolute;
+  top: -65px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+  font-weight: bold;
+}
+.img--correct::after {
+  content: '✔';
+  color: #66ff31;
+}
+.img--wrong::after {
+  content: '✖';
+  color: #ff0f8e;
 }
 </style>

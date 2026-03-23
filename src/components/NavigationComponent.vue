@@ -22,7 +22,7 @@ defineProps({
   display: grid;
   width: 80%;
   margin: 40px auto;
-  height: 5px;
+  height: 6px;
   background-color: #0096ec;
   border-radius: 20px;
   grid-template-columns: repeat(v-bind(total), 1fr);
@@ -42,7 +42,7 @@ defineProps({
 .mrk {
   position: absolute;
   left: -1px;
-  top: 5px;
+  top: 6px;
   width: 2px;
   height: 12px;
   background-color: #0096ec;

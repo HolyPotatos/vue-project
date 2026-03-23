@@ -22,7 +22,11 @@ button {
   border: 0;
   margin: auto;
 }
-button:hover {
-  transform: scale(1.05);
+img:hover {
+  transform: translate(0px, 7px);
+  filter: none;
+}
+img {
+  filter: drop-shadow(0px 7px 0px #58cc02);
 }
 </style>

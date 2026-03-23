@@ -13,7 +13,7 @@ import NextComponent from './components/NextComponent.vue'
       <NavigationComponent :total="10" :current="2" />
       <div class="question">
         <div style="flex: 1"></div>
-        <QuestionComponent style="flex: 2" />
+        <QuestionComponent style="flex: 2.2" />
         <div class="btn">
           <NextComponent :visible="true" />
         </div>
@@ -40,9 +40,9 @@ import NextComponent from './components/NextComponent.vue'
 div.answers {
   display: flex;
   justify-content: space-between;
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 40px 0;
   border-radius: 0;
 }
 div.question {
