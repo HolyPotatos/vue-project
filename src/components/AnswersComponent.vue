@@ -1,71 +1,35 @@
 <script setup lang="ts">
-defineProps({
-  src: {
-    type: String,
-  },
-  id: {
-    type: Number,
-    default: -1,
-  },
-  correct: {
-    type: Boolean,
-    default: undefined,
-  },
-})
+import AnswerComponent from './AnswerComponent.vue';
+const props = defineProps<{
+answers: string[]
+id: number
+choice: number | undefined
+correct: number
+}>()
+const emit = defineEmits<{
+  click: [value: number]
+}>()
+const checkAnswers = (index: number) => {
+  if (props.choice === undefined) return undefined
+  if (index + 1 === props.correct) return true
+  if (index === props.choice) return false
+  return undefined
+}
 </script>
 <template>
-  <div :class="{ 'img--correct': correct, 'img--wrong': correct === false }">
-    <img :src="src" />
+  <div>
+    <AnswerComponent v-for="(src, n) in answers"
+                     :key="n"
+                     :src="src"
+                     :id="id"
+                     :correct="checkAnswers(n)"
+                     :disabled="choice !== undefined"
+                     @click="emit('click', n)"/>
   </div>
 </template>
 <style scoped>
 div {
-  position: relative;
-  height: 250px;
-  width: 200px;
-  border-radius: 20px;
-  margin-bottom: 50px;
-}
-img {
-  height: 100%;
-  width: 100%;
-  border-radius: 20px;
-  object-fit: cover;
-  object-position: center;
-  user-select: none;
-  pointer-events: none;
-}
-div:hover {
-  transform: translate3d(-10px, -10px, 0px);
-  box-shadow: 10px 10px 0 0 #004baa;
-  cursor: pointer;
-}
-.img--correct {
-  outline: 10px solid #66ff31;
-  transform: none;
-  pointer-events: none;
-}
-.img--wrong {
-  outline: 10px solid #ff0f8e;
-  transform: none;
-  pointer-events: none;
-}
-
-.img--correct::after,
-.img--wrong::after {
-  position: absolute;
-  top: -65px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 40px;
-  font-weight: bold;
-}
-.img--correct::after {
-  content: '✔';
-  color: #66ff31;
-}
-.img--wrong::after {
-  content: '✖';
-  color: #ff0f8e;
+  display: flex;
+  justify-content: space-evenly;
 }
 </style>

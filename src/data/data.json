@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "text": "Какой из этих архитектурных памятников находится в Индии?",
+    "answers": [
+      "/answers/taj-mahal.jpg",
+      "/answers/colosseum.jpg",
+      "/answers/chichen-itza.jpg",
+      "/answers/eiffel-tower.jpg"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 2,
+    "text": "Какая из этих знаменитых статуй находится в Рио-де-Жанейро?",
+    "answers": [
+      "/answers/statue-of-liberty.jpg",
+      "/answers/christ-the-redeemer.jpg",
+      "/answers/motherland-calls.jpg",
+      "/answers/spring-temple-buddha.jpg"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 3,
+    "text": "Какое из этих зданий — Сиднейский оперный театр?",
+    "answers": [
+      "/answers/lotus-temple.jpg",
+      "/answers/walt-disney-hall.jpg",
+      "/answers/sydney-opera.jpg",
+      "/answers/guggenheim-bilbao.jpg"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 4,
+    "text": "Какая из этих башен знаменита на весь мир своим наклоном?",
+    "answers": [
+      "/answers/big-ben.jpg",
+      "/answers/cn-tower.jpg",
+      "/answers/tokyo-tower.jpg",
+      "/answers/leaning-tower-pisa.jpg"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 5,
+    "text": "Какой из этих величественных соборов — Саграда-Фамилия в Барселоне?",
+    "answers": [
+      "/answers/sagrada-familia.jpg",
+      "/answers/notre-dame.jpg",
+      "/answers/milan-cathedral.jpg",
+      "/answers/cologne-cathedral.jpg"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 6,
+    "text": "Какое здание на данный момент является самым высоким в мире?",
+    "answers": [
+      "/answers/empire-state.jpg",
+      "/answers/petronas-towers.jpg",
+      "/answers/burj-khalifa.jpg",
+      "/answers/taipei-101.jpg"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 7,
+    "text": "Какой из этих замков стал прототипом замка в заставке студии Disney?",
+    "answers": [
+      "/answers/mont-saint-michel.jpg",
+      "/answers/neuschwanstein.jpg",
+      "/answers/bran-castle.jpg",
+      "/answers/swallows-nest.jpg"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 8,
+    "text": "На какой фотографии изображен древнегреческий храм Парфенон?",
+    "answers": [
+      "/answers/pantheon-rome.jpg",
+      "/answers/parthenon-athens.jpg",
+      "/answers/lincoln-memorial.jpg",
+      "/answers/brandenburg-gate.jpg"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 9,
+    "text": "Какой из этих знаменитых мостов называется «Золотые Ворота»?",
+    "answers": [
+      "/answers/tower-bridge.jpg",
+      "/answers/brooklyn-bridge.jpg",
+      "/answers/charles-bridge.jpg",
+      "/answers/golden-gate.jpg"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 10,
+    "text": "Какой из этих архитектурных шедевров находится на Красной площади в Москве?",
+    "answers": [
+      "/answers/st-basils-cathedral.jpg",
+      "/answers/kiev-pechersk.jpg",
+      "/answers/hagia-sophia.jpg",
+      "/answers/blue-mosque.jpg"
+    ],
+    "correct": 1
+  }
+]

@@ -1,14 +1,8 @@
 <script setup lang="ts">
-defineProps({
-  visible: {
-    type: Boolean,
-    default: true,
-  },
-})
 defineEmits(['click'])
 </script>
 <template>
-  <button v-if="visible" @click="$emit('click', $event)">
+  <button @click="$emit('click', $event)">
     <img src="/Polygon.svg" alt="Следующий вопрос" />
   </button>
 </template>
@@ -21,6 +15,7 @@ button {
   background-color: transparent;
   border: 0;
   margin: auto;
+  transform: translate(-50%, -50%);
 }
 img:hover {
   transform: translate(0px, 7px);

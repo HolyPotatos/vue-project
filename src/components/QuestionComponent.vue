@@ -9,15 +9,20 @@ defineProps({
 </script>
 
 <template>
-  <p>{{ text }}</p>
+  <div>
+    <p>{{ text }}</p>
+  </div>
 </template>
 <style scoped>
+div{
+  height: 230px;
+}
 p {
   font-weight: 600;
   color: white;
   text-align: center;
   font-size: 22px;
-  margin: 50px auto;
+  margin: 80px auto;
   white-space: pre-wrap;
 }
 </style>
