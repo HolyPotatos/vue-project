@@ -22,8 +22,8 @@ const choiceHandler = (value: number) => {
 
 <template>
   <div style="position: relative">
-    <img src="/flowers-left.svg" alt="" class="decor decor-left" />
-    <img src="/flowers-right.svg" alt="" class="decor decor-right" />
+    <img src="../src/assets/flowers-left.svg" alt="" class="decor decor-left" />
+    <img src="../src/assets/flowers-right.svg" alt="" class="decor decor-right" />
     <div class="container">
       <NavigationComponent :total="data.length" :current="current" />
       <div class="question">
@@ -50,19 +50,13 @@ const choiceHandler = (value: number) => {
 <style scoped>
 .container {
   position: relative;
-  background: linear-gradient(45deg, #003dce, #15aaff, #003dce);
+  background: linear-gradient(45deg, #003dce, #15aaff, #14A4FC, #003dce);
   box-shadow: 7px 7px 0 0 #0060d9;
   border-radius: 51px;
-  height: 600px;
-  min-width: 1024px;
+  height: 813px;
+  min-width: 1095px;
   padding: 5px 40px;
   z-index: 10;
-}
-div.answers {
-  width: 90%;
-  margin: 0 auto;
-  padding: 40px 0;
-  border-radius: 0;
 }
 div.question {
   display: flex;
@@ -80,10 +74,10 @@ div.btn {
 }
 .decor-left {
   left: 0;
-  transform: translate(-50%, -35%) scale(0.8);
+  transform: translate(-58%, -33%);
 }
 .decor-right {
   right: 0;
-  transform: translate(50%, -80%) scale(0.8);
+  transform: translate(52%, -92%);
 }
 </style>

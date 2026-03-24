@@ -3,7 +3,7 @@ defineEmits(['click'])
 </script>
 <template>
   <button @click="$emit('click', $event)">
-    <img src="/Polygon.svg" alt="Следующий вопрос" />
+    <img src="../assets/Polygon.svg" alt="Следующий вопрос" />
   </button>
 </template>
 

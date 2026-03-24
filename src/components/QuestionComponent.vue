@@ -15,7 +15,10 @@ defineProps({
 </template>
 <style scoped>
 div{
-  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 410px;
 }
 p {
   font-weight: 600;

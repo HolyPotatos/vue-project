@@ -20,8 +20,8 @@ defineProps({
 <style scoped>
 .bar {
   display: grid;
-  width: 80%;
-  margin: 40px auto;
+  width: 90%;
+  margin: 30px auto;
   height: 6px;
   background-color: #0096ec;
   border-radius: 20px;
