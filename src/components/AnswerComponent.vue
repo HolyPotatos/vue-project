@@ -11,21 +11,22 @@ defineProps({
     type: Boolean,
     default: undefined,
   },
-  disabled:{
+  disabled: {
     type: Boolean,
-    default: false
-  }
-})
+    default: false,
+  },
+});
 </script>
 <template>
-  <div :class="{ 'img--correct': correct,
-                 'img--wrong': correct === false,
-                 'img--disabled': disabled}">
+  <div
+    class="layout"
+    :class="{ 'img--correct': correct, 'img--wrong': correct === false, 'img--disabled': disabled }"
+  >
     <img role="button" tabindex="0" :src="src" />
   </div>
 </template>
 <style scoped>
-div {
+.layout {
   position: relative;
   height: 250px;
   width: 200px;
@@ -46,7 +47,9 @@ div:hover {
   box-shadow: 10px 10px 0 0 #004baa;
   cursor: pointer;
 }
-.img--disabled, .img--correct,  .img--wrong{
+.img--disabled,
+.img--correct,
+.img--wrong {
   transform: none;
   pointer-events: none;
 }
@@ -66,11 +69,11 @@ div:hover {
   font-weight: bold;
 }
 .img--correct::after {
-  content: '✔';
+  content: "✔";
   color: #66ff31;
 }
 .img--wrong::after {
-  content: '✖';
+  content: "✖";
   color: #ff0f8e;
 }
 </style>
